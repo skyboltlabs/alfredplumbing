@@ -156,10 +156,23 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="button" onclick="openWhatsApp()">Send Message via WhatsApp</button>
                                 </div>
                             </div>
                         </form>
+                        
+                        <script>
+                            function openWhatsApp() {
+                                const name = document.getElementById("name").value;
+                                const email = document.getElementById("email").value;
+                                const subject = document.getElementById("subject").value;
+                                const message = document.getElementById("message").value;
+                        
+                                const whatsappUrl = `https://wa.me/+27XXXXXXXXXX?text=Name:%20${name}%0AEmail:%20${email}%0ASubject:%20${subject}%0AMessage:%20${message}`;
+                        
+                                window.open(whatsappUrl, '_blank');
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
