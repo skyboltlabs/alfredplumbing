@@ -487,12 +487,12 @@
                         frameborder="0" style="height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
                     -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d211747.73471887686!2d18.37010213304393!3d-33.978189345818734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x1dcc5dea457e8c3b%3A0xa536d1b5c546605f!2sAlfred%20Plumbing%20Maintenance%20And%20Renovations!3m2!1d-33.9339228!2d18.445432099999998!5e0!3m2!1sen!2sza!4v1705921594801!5m2!1sen!2sza" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d211747.73471887686!2d18.37010213304393!3d-33.978189345818734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x1dcc5dea457e8c3b%3A0xa536d1b5c546605f!2sAlfred%20Plumbing%20Maintenance%20And%20Renovations!3m2!1d-33.9339228!2d18.445432099999998!5e0!3m2!1sen!2sza!4v1705921594801!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     
                 </div>
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-light p-5 h-100 d-flex align-items-center">
-                        <form action="contact.php" method="post">
+                        <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -519,17 +519,29 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="button" onclick="openWhatsApp()">Send Message via WhatsApp</button>
                                 </div>
                             </div>
                         </form>
+                        
+                        <script>
+                            function openWhatsApp() {
+                                const name = document.getElementById("name").value;
+                                const email = document.getElementById("email").value;
+                                const subject = document.getElementById("subject").value;
+                                const message = document.getElementById("message").value;
+                        
+                                const whatsappUrl = `https://wa.me/+27840515349?text=Name:%20${name}%0AEmail:%20${email}%0ASubject:%20${subject}%0AMessage:%20${message}`;
+                        
+                                window.open(whatsappUrl, '_blank');
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Contact End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
